@@ -41,6 +41,19 @@ print ('TELLO SIMPLE FLIGHT Python3 Demo.')
 recvThread = threading.Thread(target=recv)
 recvThread.start()
 
+# # # # # # # # # # # ATENTION # # # # # # # # # # # 
+# HERE IS YOUR FLIGHT PLAN AKA COMMAND LIST        #
+# Edit the list called command_list to make a      #
+# custom flight plan to your Tello EDU Drone       #
+#                                                  #
+# Here is a list of sample commands:               #
+#  takeoff, land, up 50, down 50, left 50,         #
+#  right 50, forward 50, back 50, flip b,          #
+#  stop, battery?, command                         #
+#                                                  #
+# Note1: the first one always need to be 'command' #
+# Note2: pass all commands as strings (between '') #
+# # # # # # # # # # # #  # # # # # # # # # # # # # # 
 command_list = ['command', 'battery?', 'takeoff', 'land']
 
 for msg in command_list:
